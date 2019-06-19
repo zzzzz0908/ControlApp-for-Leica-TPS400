@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp1.SetingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Настройки тахеометра" Height="300" Width="460" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:SettingsVM/>
+    </Window.DataContext>
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="279,27,0,0" VerticalAlignment="Top" Width="120" DisplayMemberPath="Key" SelectedValuePath="Value" SelectedValue="{Binding EDMmode}" ItemsSource="{Binding EDMmodeList}"/>
+        <ComboBox HorizontalAlignment="Left" Margin="279,77,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding AngleUnitList}" SelectedValue="{Binding AngleUnit}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+        <ComboBox HorizontalAlignment="Left" Margin="279,126,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding DisplayLightList}" SelectedValue="{Binding DisplayLight}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+        <ComboBox HorizontalAlignment="Left" Margin="279,176,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding LaserPointerList}" SelectedValue="{Binding LaserPointer}" DisplayMemberPath="Key" SelectedValuePath="Value"/>
+        <Label Content="Режим дальномера" HorizontalAlignment="Left" Margin="50,18,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Единицы измерения углов" HorizontalAlignment="Left" Margin="50,68,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Подсветка дисплея" HorizontalAlignment="Left" Margin="50,117,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Лазерный визир" HorizontalAlignment="Left" Margin="50,167,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="236,228,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" Click="Button_Click"/>
+        <Button Content="Отмена" HorizontalAlignment="Left" Margin="324,228,0,0" VerticalAlignment="Top" Width="75" IsCancel="True"/>
+
+    </Grid>
+</Window>

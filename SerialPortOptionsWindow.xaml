@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApp1.SerialPortOptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Параметры RS232" Height="280" Width="400" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <Window.DataContext>
+        <local:spOptionsVM/>
+    </Window.DataContext>
+    <Grid>
+        <ComboBox HorizontalAlignment="Left" Margin="200,32,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding portNameList}" SelectedItem="{Binding portName}" SelectedIndex="0"/>
+        <ComboBox HorizontalAlignment="Left" Margin="200,82,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding baudrateList}" SelectedItem="{Binding baudrate}" SelectedIndex="0"/>
+        <ComboBox HorizontalAlignment="Left" Margin="200,132,0,0" VerticalAlignment="Top" Width="120" SelectedItem="{Binding parity}" ItemsSource="{Binding parityList}"/>
+        <Button Content="OK" HorizontalAlignment="Left" Margin="245,193,0,0" VerticalAlignment="Top" Width="75" IsDefault="True" IsCancel="True"/>
+        <Label Content="Имя порта" HorizontalAlignment="Left" Margin="34,26,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Скорость передачи" HorizontalAlignment="Left" Margin="34,76,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Четность" HorizontalAlignment="Left" Margin="34,126,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+    </Grid>
+</Window>
