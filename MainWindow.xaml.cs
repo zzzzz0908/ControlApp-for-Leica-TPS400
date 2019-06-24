@@ -29,17 +29,17 @@ namespace WpfApp1
 
 
 
-            ObservableCollection<Measurment> _measurments = new ObservableCollection<Measurment>
-            {
-                new Measurment("11....+00000016 21.324+20818500 22.324+08236500 31..00+00000760 81..00-00050299 82..00+00000173 83..00-00000930 87..10+00000001 w\r\n")
-                //new Measurment(2, 43, 35, 22),
-                //new Measurment(3, 24, 35, 22),
-                //new Measurment(4, 24, 35, 22),
-                //new Measurment(5, 24, 35, 22)
-            };
+            //ObservableCollection<Measurment> _measurments = new ObservableCollection<Measurment>
+            //{
+            //    new Measurment("11....+00000016 21.324+20818500 22.324+08236500 31..00+00000760 81..00-00050299 82..00+00000173 83..00-00000930 87..10+00000001 w\r\n")
+            //    //new Measurment(2, 43, 35, 22),
+            //    //new Measurment(3, 24, 35, 22),
+            //    //new Measurment(4, 24, 35, 22),
+            //    //new Measurment(5, 24, 35, 22)
+            //};
 
-            MainVM mainVM = (MainVM)this.DataContext;
-            mainVM.Measurments = _measurments;
+            //MainVM mainVM = (MainVM)this.DataContext;
+            //mainVM.Measurments = _measurments;
         }
 
       

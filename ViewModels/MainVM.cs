@@ -75,6 +75,10 @@ namespace WpfApp1
 
         public MainVM()
         {
+            //список измерений
+            _measurments = new ObservableCollection<Measurment>();
+
+
             SendValue = new DelegateCommand<string>(str =>
             {
                 switch (str)
